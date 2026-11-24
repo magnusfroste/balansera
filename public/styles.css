@@ -1,0 +1,155 @@
+:root{
+  --papper:#faf7f2;
+  --bläck:#14181f;
+  --dämpad:#4a5260;
+  --accent:#1f8a70;
+  --accent-mörk:#136352;
+  --stjärna:#e8a33d;
+  --fel:#c9503f;
+  --kort:#ffffff;
+  --linje:#e3ddd2;
+}
+*{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+html,body{margin:0;height:100%}
+body{
+  background:var(--papper);
+  color:var(--bläck);
+  font:400 18px/1.35 system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+  touch-action:manipulation;
+  overscroll-behavior:none;
+  -webkit-text-size-adjust:100%;
+}
+button{font:inherit;color:inherit;cursor:pointer}
+h1,h2,p{margin:0}
+
+/* ---------- Startskärm ---------- */
+#startskarm{
+  position:fixed;inset:0;z-index:40;
+  display:grid;place-items:center;
+  background:var(--papper);
+  padding:16px;overflow:auto;
+}
+.sk-inner{width:min(92vw,520px);text-align:center;display:flex;flex-direction:column;align-items:center;gap:10px}
+.sk-ikon{width:clamp(72px,12vmin,108px);height:auto;border-radius:26%;box-shadow:0 8px 22px rgba(20,24,31,.14)}
+#startskarm h1{font-size:clamp(34px,6.6vmin,60px);font-weight:800;letter-spacing:-.028em}
+.sk-tagline{color:var(--dämpad);font-size:clamp(16px,2.3vmin,22px)}
+.sk-taggar{display:flex;gap:8px;flex-wrap:wrap;justify-content:center;margin-top:2px}
+.sk-taggar span{
+  font-size:clamp(13px,1.7vmin,16px);font-weight:600;color:var(--accent-mörk);
+  background:color-mix(in srgb,var(--accent) 12%,#fff);
+  padding:5px 12px;border-radius:999px
+}
+.sk-play{
+  margin-top:8px;border:0;background:var(--accent);color:#fff;font-weight:700;
+  font-size:clamp(19px,2.8vmin,26px);
+  padding:16px 44px;border-radius:999px;display:inline-flex;align-items:center;gap:10px;
+  box-shadow:0 10px 22px rgba(31,138,112,.34);min-height:56px;
+}
+.sk-play:active{transform:translateY(1px)}
+.sk-play svg{width:1em;height:1em;fill:#fff}
+.sk-fot{color:var(--dämpad);opacity:.85;font-size:clamp(12px,1.6vmin,15px)}
+.sk-laroplan{margin-top:6px;text-align:left;width:100%;color:var(--dämpad);font-size:14px}
+.sk-laroplan summary{font-size:14px;cursor:pointer;list-style:none;text-align:center;opacity:.8}
+.sk-laroplan p{margin-top:8px;line-height:1.4}
+
+/* ---------- Spelet ---------- */
+#spel{display:flex;flex-direction:column;height:100dvh;padding:8px clamp(8px,2vw,20px);gap:6px}
+.hud{display:flex;align-items:center;justify-content:space-between;gap:8px;flex:0 0 auto}
+.hud-vanster{display:flex;align-items:center;gap:8px;min-width:0}
+.kotten-hud{width:clamp(28px,4.4vmin,40px);height:clamp(28px,4.4vmin,40px)}
+.hud-titel{font-weight:800;font-size:clamp(15px,2.2vmin,21px);letter-spacing:-.02em}
+.hud-mitten{display:flex;align-items:center;gap:12px;flex-wrap:wrap;justify-content:center}
+.runda{color:var(--dämpad);font-size:clamp(15px,1.9vmin,18px);font-weight:600}
+.stjarnor{font-size:clamp(17px,2.4vmin,23px);color:var(--stjärna);letter-spacing:2px}
+.hud-hoger{display:flex;gap:6px}
+.ikon-knapp{
+  width:clamp(40px,6vmin,52px);height:clamp(40px,6vmin,52px);border-radius:14px;
+  border:1px solid var(--linje);background:var(--kort);font-weight:700;font-size:clamp(16px,2.2vmin,20px);
+}
+.ikon-knapp svg{width:60%;height:60%;fill:none;stroke:var(--bläck);stroke-width:1.9;stroke-linecap:round;stroke-linejoin:round}
+.ikon-knapp:active{background:var(--linje)}
+
+.brada{flex:1 1 auto;display:flex;flex-direction:column;justify-content:center;gap:8px;min-height:0}
+.reaktion{
+  display:flex;flex-wrap:wrap;align-items:center;justify-content:center;
+  gap:clamp(4px,1.2vw,14px);row-gap:6px;
+}
+.pil{font-size:clamp(26px,4.4vmin,42px);color:var(--accent-mörk);font-weight:700;padding:0 2px}
+.plus{font-size:clamp(20px,3vmin,30px);color:var(--dämpad);font-weight:600}
+
+.amne{
+  background:var(--kort);border:1px solid var(--linje);border-radius:16px;
+  padding:6px 8px 8px;display:flex;flex-direction:column;align-items:center;gap:4px;
+  box-shadow:0 3px 10px rgba(20,24,31,.05);min-width:clamp(84px,13vmin,132px);
+}
+.amne.klar{border-color:var(--accent);background:color-mix(in srgb,var(--accent) 7%,#fff)}
+.steg{
+  display:flex;align-items:center;gap:4px;background:var(--papper);
+  border:1px solid var(--linje);border-radius:999px;padding:3px;
+}
+.steg button{
+  width:clamp(48px,6.6vmin,58px);height:clamp(48px,6.6vmin,58px);border:0;border-radius:999px;
+  background:var(--kort);font-size:clamp(22px,3.2vmin,30px);font-weight:800;line-height:1;
+  border:1px solid var(--linje);
+}
+.steg button:active{background:color-mix(in srgb,var(--accent) 16%,#fff)}
+.steg .varde{
+  min-width:clamp(34px,5vmin,48px);text-align:center;
+  font-size:clamp(24px,3.6vmin,36px);font-weight:800;color:var(--accent-mörk);
+}
+.steg .varde.ett{color:var(--dämpad)}
+.formel{font-size:clamp(22px,3.4vmin,34px);font-weight:700;white-space:nowrap}
+.formel sub{font-size:.68em;vertical-align:-.28em}
+.koeff{font-size:clamp(20px,3vmin,30px);font-weight:800;color:var(--accent-mörk);margin-right:2px}
+
+.fraga{text-align:center;color:var(--dämpad);font-size:clamp(16px,1.9vmin,18px)}
+.fraga.ok{color:var(--accent-mörk);font-weight:700}
+.fraga.nej{color:var(--fel);font-weight:700}
+
+.vag{flex:0 0 auto;background:var(--kort);border:1px solid var(--linje);border-radius:16px;padding:6px 10px;max-width:560px;margin:0 auto;width:100%}
+.vag-rubrik,.rakning-rad{display:grid;grid-template-columns:1fr 92px 92px;align-items:center;gap:6px}
+.vag-rubrik{color:var(--dämpad);font-size:clamp(14px,1.7vmin,17px);font-weight:700;text-transform:uppercase;letter-spacing:.03em;padding-bottom:2px}
+.vag-rubrik span:not(:first-child),.rakning-rad span:not(:first-child){text-align:center}
+.rakning-rad{font-size:clamp(18px,2.5vmin,23px);font-weight:700;padding:1px 0}
+.rakning-rad .el{font-weight:800}
+.rakning-rad .tal{font-variant-numeric:tabular-nums}
+.rakning-rad .tal.ok{color:var(--accent-mörk)}
+.rakning-rad .tal.nej{color:var(--fel)}
+.rakning-rad .tal .bock{font-size:.85em;margin-left:3px}
+
+.kotten-rad{flex:0 0 auto;display:flex;align-items:center;gap:10px;justify-content:space-between;flex-wrap:wrap}
+.kotten-prat{display:flex;align-items:center;gap:10px;flex:1 1 240px;min-width:0}
+.kotten-svg{width:clamp(34px,5.2vmin,48px);height:clamp(34px,5.2vmin,48px);flex:0 0 auto}
+#kottentext{color:var(--dämpad);font-size:clamp(15px,1.9vmin,18px)}
+.knapp{
+  border:0;background:var(--accent);color:#fff;font-weight:700;
+  padding:12px 22px;border-radius:999px;font-size:clamp(16px,2.2vmin,20px);
+  min-height:52px;box-shadow:0 6px 16px rgba(31,138,112,.28);
+}
+.knapp:active{transform:translateY(1px)}
+.knapp.stor{font-size:clamp(19px,2.6vmin,24px);padding:16px 40px;min-height:60px}
+
+/* ---------- Överlägg (runda klar / banan klar) ---------- */
+#overlay{
+  position:fixed;inset:0;z-index:30;background:var(--papper);
+  display:grid;place-items:center;padding:20px;text-align:center;
+}
+.ov-inner{width:min(92vw,520px);display:flex;flex-direction:column;align-items:center;gap:10px}
+#ov-bild svg{width:clamp(70px,12vmin,120px);height:auto}
+#ov-titel{font-size:clamp(26px,4.4vmin,40px);font-weight:800}
+#ov-text{color:var(--dämpad);font-size:clamp(16px,2.2vmin,20px)}
+.ov-knappar{margin-top:6px;display:flex;gap:10px;flex-wrap:wrap;justify-content:center}
+.knapp.tyst{background:var(--kort);color:var(--dämpad);border:1px solid var(--linje);box-shadow:none}
+
+[hidden]{display:none !important}
+
+@media (max-height:520px){
+  .sk-laroplan{display:none}
+  .fraga{display:none}
+}
+@media (prefers-reduced-motion:no-preference){
+  .pulsera{animation:puls 1.4s ease-in-out infinite}
+  @keyframes puls{0%,100%{transform:scale(1)}50%{transform:scale(1.06)}}
+  .amne.ny{animation:in .28s ease-out}
+  @keyframes in{from{transform:translateY(6px);opacity:.4}to{transform:none;opacity:1}}
+}
