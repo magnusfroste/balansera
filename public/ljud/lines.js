@@ -1,0 +1,25 @@
+/* Genererad av ljudify – text till färdig mp3-fil. */
+window.__ROST = {
+ "Balanserat! Kan du göra den ännu enklare?": "64a1fdaf51",
+ "Balanserat! Snyggt.": "566cb76938",
+ "Massan stämmer! Men alla tal kan delas med": "29a6066c14",
+ "– den enklaste formen är ännu snyggare.": "ab95db5939",
+ "Massan stämmer: lika många atomer av varje slag på båda sidor.": "d1b2d6188c",
+ "Nästa reaktion →": "a75c38fdb6",
+ "Räkna atomerna på båda sidor om pilen.": "180d10da97",
+ "Börja med att sätta ettan framför alla ämnen och räkna.": "10821c995f",
+ "Inte riktigt än.": "dd59f1d6f4",
+ "Titta på": "356126f95f",
+ "till vänster och": "5556dffb97",
+ "till höger. Ändra ett tal och räkna igen.": "0dcb84481d",
+ "överlägg": "f799b93766",
+ "Rundan är klar.": "85c2b2674f",
+ "Rundan är klar!": "d195cca401",
+ "reaktioner balanserade.": "66c0d4361b",
+ "stjärnor totalt.": "75523124e4",
+ "Byt nivå": "ed8a8eea3b",
+ "Sätt tal framför ämnena så att atomerna stämmer.": "76fa67436b",
+ "Nu blir det svårare. Räkna noga.": "662f91fc1d",
+ "Räkna så här:": "8db743b436",
+ ". Alla tal ska vara lika på båda sidor.": "aae8811e28"
+};
